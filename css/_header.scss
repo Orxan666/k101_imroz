@@ -1,0 +1,140 @@
+#header {
+    background-color: rgb(91, 91, 126);
+
+
+    .logo {
+        width: 10%;
+
+        h1 {
+            color: white;
+            cursor: pointer;
+        }
+    }
+
+    .big-menu {
+        position: relative;
+
+        width: 90%;
+
+        ul {
+            li {
+                a {
+                    text-decoration: none;
+                    color: white;
+                    display: block;
+                    padding: 20px;
+                }
+
+                &.home {
+                    position: relative;
+
+                    &:hover {
+                        .home-dropped {
+                            transform: translateY(0px);
+                            opacity: 1;
+                            visibility: visible;
+
+                        }
+                    }
+
+                    .home-dropped {
+                        background-color: darkblue;
+                        position: absolute;
+                        transform: translateY(-10px);
+                        opacity: 0;
+                        visibility: hidden;
+                        transition: 0.5s ease-in-out;
+                        width: 150px;
+                        top: 100%;
+
+                        li {
+                            border-bottom: 1px solid red;
+
+                            &:nth-child(6) {
+                                a {
+                                    border: none;
+                                }
+                            }
+
+                            a {
+                                padding: 10px;
+                                margin-left: 10px;
+                            }
+
+                            &.nermin {
+                                position: relative;
+
+                                &:hover {
+                                    .nermin-dropped {
+                                        opacity: 1;
+                                        visibility: visible;
+                                        transform: translateX(0);
+                                    }
+                                }
+
+                                .nermin-dropped {
+                                    transition: 0.5s ease-in-out;
+                                    background-color: black;
+                                    position: absolute;
+                                    transform: translateX(20px);
+                                    opacity: 0;
+                                    visibility: hidden;
+                                    left: 100%;
+                                    top: 0%;
+
+                                    li {
+                                        a {
+                                            margin: 0%;
+                                        }
+                                    }
+
+                                }
+                            }
+                        }
+
+                    }
+                }
+
+                &.about {
+                    &:hover {
+                        .big-about-dropped {
+                            transform: translateY(0px);
+                            opacity: 1;
+                            visibility: visible;
+
+                        }
+                    }
+
+                    .big-about-dropped {
+                        transform: translateY(25px);
+                        top: 100%;
+                        left: 0%;
+                        transition: 0.5s ease-in-out;
+                        opacity: 0;
+                        visibility: hidden;
+                        width: 100%;
+                        position: absolute;
+                        background-color: red;
+
+                        .box {
+                            text-align: center;
+                            width: 25%;
+
+                            img {
+                                object-fit: cover;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.txt1{
+    background: linear-gradient(120deg, #1C99FE 20.69%, #7644FF 50.19%, #FD4766 79.69%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
